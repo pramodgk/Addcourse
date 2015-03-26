@@ -7,15 +7,15 @@ describe('adminCtrl', function () {
   beforeEach(module('admin'));
 
   beforeEach(inject(function ($rootScope, $controller) {
-  	scope= $rootscope.new();
+  	scope= $rootScope.$new();
     ctrl = $controller('adminCtrl',{
     	$scope:scope
     });
   }));
  console.log('My new app initialized');
   it('should have ctrlName as adminCtrl', function () {
-  	// console.log(ctrl.ctrlName);
-    // expect(ctrl.ctrlName).toEqual('adminCtrl');
+  	console.log(ctrl.ctrlName);
+     expect(ctrl.ctrlName).toEqual('adminCtrl');
   });
 
 });
