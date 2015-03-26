@@ -1,0 +1,25 @@
+<h1>Add New Course</h1>
+<div ng-controller="CreateCtrl">
+	<table class="table table-striped">
+		<thead>Create New Course</thead>
+		<tr>
+			<td>Select the course Name</td>
+			<td><input type="text" ng-model="cname" placeholder="Enter course name"></td>
+		</tr>
+		<tr>
+			<td>Select the branches</td>
+			<td><select class="form-control" ng-model="courses" ng-options="l as l for l in list" multiple></select></td>
+		</tr>
+		<tr>
+			<td>Maximum Intake</td><td><input type="text" ng-model="intake" class="form-control"  style="width:150px;height:30px" required></td>
+		</tr>
+		<tr>
+			<td>Course Started Date</td><td><input type="text" ng-model="csdate" class="form-control"  style="width:150px;height:30px" required placeholder="DD/MM/YYYY"></td>
+		</tr>
+		<tr>
+			<td>Eligibility</td><td><textarea ng-model="eligible"></textarea></td>
+		</tr>
+		<tr>
+			<td><button class="btn btn-info" style="width:80px" ng-click="addcourse()">Add</button></td><td><button class="btn btn-danger">Cancel</button></td>
+	</table>
+</div>

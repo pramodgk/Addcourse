@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+<html lang='en' ng-app='myNewApp'>
+
+<head>
+    <title>Course</title>
+    <meta name='viewport' content='width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes'>
+    <!-- inject:head:js -->
+    <!-- endinject -->
+    <!-- inject:html -->
+    <!-- endinject -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body>
+<div class="wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+                      
+          
+            <!-- sidebar -->
+           <div ui-view="sidebar">
+           </div>
+            <!-- top nav -->
+            <div ui-view="header">
+            </div>
+           
+<div class="row">
+        <div ui-view="@" style="margin-left:280px;margin-top:60px">
+        </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- inject:js -->
+    <!-- endinject -->
+</body>
+</html>

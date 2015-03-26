@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="D:\FMS\css\bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <img style="float: left; " height="70px" width="50px" src="D:\FMS\icon\create1(3).png" />
+        <h3 style="display:inline;">Create User </h3>
+        <br/>
+        <h5 class="text-muted"> &nbsp; <i>Create new user</i></h5>
+        <br/>
+        <hr style="background-color: #D3D3D3;" />
+        <table class="table">
+            <tr>
+                <td style="border: none;">
+                    <label for="username"> <span style="color:red">*</span> User Name: </label>
+                    <br/>
+                    <input type="text" id="username" class="form-control-sm" placeholder="Default Input" required autofocus>
+                </td>
+                <td style="border: none;">
+                    <label for="password"> <span style="color:red">*</span> Password: </label>
+                    <br/>
+                    <input type="password" id="password" class="form-control-sm" placeholder="Default Input" required autofocus>
+                </td>
+                <td style="border: none;">
+                    <label for="cpassword"> <span style="color:red">*</span> confirm password: </label>
+                    <br/>
+                    <input type="password" id="cpassword" class="form-control-sm" placeholder="Default Input" required autofocus>
+                    <br/>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: none;">
+                    <label style="display:inline" for="TenantName"> <span style="color:red">*</span> Name </label>
+                    <br/>
+                    <input type="text" id="TenantName" class="form-control-sm" placeholder="Default Input" required autofocus>
+                </td>
+                <td style="border: none;">
+                    <label style="display:inline" for="email"> <span style="color:red">*</span> E-Mail </label>
+                    <br/>
+                    <input type="email" id="email" class="form-control-sm" placeholder="Default Input" required autofocus>
+                </td>
+                <td style="border: none;">
+                    <label style="display:inline" for="status"> <span style="color:red">*</span> Tenent Name: </label><br/>
+                        <div class="row col-md-7">
+                        <select class="form-control" id="status">
+                            <option>Default Input</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        <div>
+                    
+                </td>
+            </tr>
+            <tr>
+            <td style="border: none;">
+                    
+                   <label style="display:inline" for="status"> <span style="color:red">*</span> user Role: </label><br/>
+                        <div class="row col-md-7">
+                        <select class="form-control" id="status">
+                            <option>Default Input</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        <div>
+                    
+                </td>
+                 <td style="border: none;">
+                        <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="sendpassword" >Send this password to the user by email</input>
+                        </label>
+                    </div>
+                    </td>
+                    
+                </tr>
+        </table>
+        <hr style="background-color: #D3D3D3;" />
+        <div class="row  pull-right">
+
+                <button class="btn" style="background:#3F4E63;color:white;-webkit-border-radius: 0px;">SAVE</button>
+                <button class="btn" style="background:#5CB0DE;color:white;-webkit-border-radius: 0px;">RESET</button>
+                <button class="btn" style="background:#EFAD4D;color:white;-webkit-border-radius: 0px;">CANCEL</button>
+        </div>
+    </div>
+</body>
+
+</html>
