@@ -45,7 +45,7 @@
      $scope.addcourse=function()
      {
         $scope.newcourse.push(new $scope.add());
-        console.log($scope.newcourse[0]);
+        console.log($scope.newcourse[0].cname);
         $location.path("Course/AddSuccess");
      }
     })
@@ -66,10 +66,11 @@
         url:"/AddSuccess",
         views:{
           '@':{
-
-        templateUrl:"Create/AddSuccess.tpl.html"
+        templateUrl:"Create/AddSuccess.tpl.html",
+         controller :'CreateCtrl'
       }
-    }
+    },
+   
       });
   }
 })();

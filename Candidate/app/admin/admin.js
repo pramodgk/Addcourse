@@ -11,35 +11,10 @@
    angular
     .module('admin', [
       'ui.router'
-    ])
-     .controller('adminCtrl', function($scope,$location, $rootScope){
-     $scope.chk=function()
-     {
-       $scope.uname=$scope.txt1;
-       $scope.pwd=$scope.txt2;
-       if($scope.uname=="pramod" && $scope.pwd=="12345")
-       {
-     
-
-      
-          $location.path("Course/SuccessPage");         
-
-        alert("Login Success");
-
-       }
-       else
-       {
-        alert("Username or Password incorrect");
-        $scope.txt1='';
-        $scope.txt2='';
-
-       }
-       
-     };
-     //alert("hello");
-   
-     
-    }  )
+    ]);
+  
+angular
+    .module('admin')
     .config(config);
 
   function config($stateProvider) {
