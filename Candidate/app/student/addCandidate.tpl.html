@@ -1,0 +1,67 @@
+<div ng-controller="CreateCtrl">
+    <!-- <div class="row"></div> -->
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+    <p>{{newcourse.cname}}</p>
+        <form>
+            <table class="table  table-hover" style="width:700px">
+               
+                <tr>
+                    <th style="text-align:center" colspan="2">
+                        <h2>Enter the Student details</h2></th>
+                </tr>
+                
+                <tr>
+                    <td>Enter First name</td>
+                    <td>
+                        <input type="text" ng-model="fname" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter last name</td>
+                    <td>
+                        <input type="text" ng-model="lname" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter DOB</td>
+                    <td>
+                        <input type="text" ng-model="dob" class="form-control" placeholder="DD/MM/YYYY">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Degree</td>
+                    <td>
+                        <select class="form-control" id="peopleArraySel1" ng-model="peopleArrayValue1" ng-options="person.cname for person in newcourse">
+                            <option value="">[Select course]</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Branch</td>
+                    <td>
+                        <select class="form-control" ng-model="branch" ng-options="l as l for l in peopleArrayValue1.courses">
+                            <option value="">[Select branch]</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                	<td>Register No</td><td><input type="text" id="rno" value="1BM {{peopleArrayValue1.cname}} {{regNo}}" 
+                	></td>
+                </tr>
+                <tr>
+                    <td>Date of Join</td><td><input type="text" class="form-control" ng-model="doj"></td>
+                </tr>
+                
+               	<tr >
+                	<td style="text-align:center"><button class="btn btn-info" ng-click="addStud()">Submit</button></td>	
+                	<td style="text-align:center"><button class="btn btn-danger">Cancel</button></td>
+                	<td > <button class="btn btn-info" ui-sref="Course.Create.sview">View</button></td>
+                </tr>
+            </table>
+        </form>
+        <p>{{rno}}</p>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>

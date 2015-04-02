@@ -12,10 +12,7 @@
     .module('student', [
       'ui.router'
     ])
-    .controller("StudentCtrl",function(){
-
-     
-    })
+   
     .config(config);
 
   function config($stateProvider) {
@@ -29,6 +26,16 @@
           }
         }
       })
+      .state('Course.addCandidate',{
+        url:'/addCandidate',
+        views:{
+          '@':{
+            url:'/addCandidate',
+            templateUrl:'student/addCandidate.tpl.html'
+          }
+        }
+      })
+     
       /*.state('std',{
         url:'/std',
         views:{

@@ -12,20 +12,22 @@
     .module('admin')
     .controller('adminCtrl', adminCtrl);
 
-  function adminCtrl($scope,$location) {
+  function adminCtrl($scope,$location,$rootScope) {
     var vm = this;
+    $rootScope.login2=true;
     vm.ctrlName = 'adminCtrl';
       $scope.chk=function()
      {
-       $scope.uname=$scope.txt1;
+       $rootScope.uname=$scope.txt1;
        $scope.pwd=$scope.txt2;
        if($scope.uname=="pramod" && $scope.pwd=="12345")
        {
      
 
-      
-          $location.path("Course/SuccessPage");         
-
+           $rootScope.login1 = true;
+           $rootScope.login2=false;
+          $location.path("Course/WelcomePage");         
+          console.log($scope.login);
         alert("Login Success");
 
        }
@@ -36,7 +38,11 @@
         $scope.txt2='';
 
        }
-       
+        $rootScope.logout = function () {
+        $scope.login=false;
+        $location.path('/');
+        location.reload();
+      };
      };
   }
 

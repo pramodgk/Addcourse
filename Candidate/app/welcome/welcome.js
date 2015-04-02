@@ -16,7 +16,7 @@
 
   function config($stateProvider) {
     $stateProvider
-      .state('FMS.welcome', {
+      .state('Course.welcome', {
       url: '/welcome',
       views: {
         '@': {

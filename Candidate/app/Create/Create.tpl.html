@@ -1,14 +1,16 @@
 <h1>Add New Course</h1>
-<div ng-controller="CreateCtrl">
-	<table class="table table-striped">
+<div class="row" ng-controller="CreateCtrl">
+<div  class="col-md-6" >
+<form name="form" ng-submit="validate()" role="form">
+	<table  class="table table-striped" style="width:500px">
 		<thead>Create New Course</thead>
 		<tr>
-			<td>Select the course Name</td>
-			<td><input type="text" ng-model="cname" placeholder="Enter course name"></td>
+			<td>Enter the  course Name</td>
+			<td><input type="text" ng-model="cname" placeholder="Enter course name" required></td>
 		</tr>
 		<tr>
 			<td>Select the branches</td>
-			<td><select class="form-control" ng-model="courses" ng-options="l as l for l in list" multiple></select></td>
+			<td><select class="form-control" ng-model="courses" ng-options="l as l for l in list" multiple ></select></td>
 		</tr>
 		<tr>
 			<td>Maximum Intake</td><td><input type="text" ng-model="intake" class="form-control"  style="width:150px;height:30px" required></td>
@@ -17,9 +19,58 @@
 			<td>Course Started Date</td><td><input type="text" ng-model="csdate" class="form-control"  style="width:150px;height:30px" required placeholder="DD/MM/YYYY"></td>
 		</tr>
 		<tr>
-			<td>Eligibility</td><td><textarea ng-model="eligible"></textarea></td>
+			<td>Eligibility</td><td><textarea ng-model="eligible" required></textarea></td>
 		</tr>
 		<tr>
-			<td><button class="btn btn-info" style="width:80px" ng-click="addcourse()">Add</button></td><td><button class="btn btn-danger">Cancel</button></td>
+			<td><button type="submit" ng-disabled="form.$invalid" class="btn btn-info" style="width:80px" ng-click="addcourse()">Add</button></td><td><button class="btn btn-danger" ng-click="clear()">Cancel</button></td></tr>
+			
+			<!-- <td><a ui-sref="Course.Create.view">View</a></td> -->
 	</table>
+</form>
+<div col-md-3><button class="btn btn-info" style="width:80px" ui-sref="Course.Create.view"> View</button></div>
+	
+</div>
+<!-- <div class="col-md-6" data-ui-view ng-show="view1">
+ -->
+<!-- 	<table ng-repeat="i in newcourse" style="border:1px solid;width:350px">
+	<tr style="background-color:pink">
+		<th >Couse Name:</th><th><h4>{{i.cname}}</h4></th>
+	</tr>
+	<tr>
+		<td>Branches:</td><td><h5 ng-repeat="gc in i.courses">{{gc}}</h5></td>
+	</tr>
+	<tr>
+		<td>Total intake:</td><td><h5>{{i.intake}}</h5></td>
+	</tr>
+	<tr>
+		<td>Course Started date:</td><td><h5>{{i.csdate}}</h5></td>
+	</tr>
+	<tr>	
+		<td>Eligibility:</td><td><h5>{{i.eligible}}</h5></td>
+	</tr>
+	</table> -->
+	
+ <!-- <select id="peopleArraySel1" ng-model="peopleArrayValue1" ng-options="person.cname for person in newcourse">
+      <option value="">[No Course]</option>
+    </select><br />
+    <br />
+    <strong>Selected Course:</strong><br />
+    <table style="border:1px solid;width:350px" ng-show="peopleArrayValue1">
+	<tr style="background-color:pink">
+		<th >Couse Name:</th><th><h4>{{peopleArrayValue1.cname}}</h4></th>
+	</tr>
+	<tr>
+		<td>Branches:</td><td><h5 ng-repeat="gc in peopleArrayValue1.courses">{{gc}}</h5></td>
+	</tr>
+	<tr>
+		<td>Total intake:</td><td><h5>{{peopleArrayValue1.intake}}</h5></td>
+	</tr>
+	<tr>
+		<td>Course Started date:</td><td><h5>{{peopleArrayValue1.csdate}}</h5></td>
+	</tr>
+	<tr>	
+		<td>Eligibility:</td><td><h5>{{peopleArrayValue1.eligible}}</h5></td>
+	</tr>
+	</table>
+</div> -->
 </div>

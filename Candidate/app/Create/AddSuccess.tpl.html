@@ -1,9 +1,12 @@
-<div class="row" ng-controller="CreateCtrl">
+
+<div ng-controller="CreateCtrl">
+	
+
 	<h1>Course Added Successfully!!</h1>
-	{{newcourse[0].cname}}
-	<!-- <ul  ng-repeat="i in newcourse">
+	<p>{{newcourse[0].cname}}</p>
+	<ul  ng-repeat="i in newcourse">
 		<h4>{{i.cname}}</h4>
-		<h5 ng-repeat="gc in i.courses">{{gc}}</h5><BR>
-		
-	</ul> -->
+		<h5 ng-repeat="gc in courses">{{gc}}</h5><BR>
+	</ul>
+	<button class="btn btn-info" ui-sref="Course.view">View</button>
 </div>

@@ -14,7 +14,7 @@
             'ui.router',
             'mgcrea.ngStrap',
             'home',
-            'Create','admin','student'
+            'Create','student','login','register','admin'
         ]);
 
     angular
@@ -22,7 +22,7 @@
         .config(config);
 
     function config($urlRouterProvider, $stateProvider) {
-        $urlRouterProvider.otherwise('/Course/admin');
+        $urlRouterProvider.otherwise('/Course/Create');
         $stateProvider
             .state('Course', {
                 url: '/Course',

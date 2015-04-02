@@ -1,0 +1,32 @@
+	
+<div>
+	<select id="studentSel1" ng-model="studentArrayValue1" ng-options="stud.fname for stud in students" class="form-control" style="width:200px">
+      <option value="">[No student]</option>
+    </select><br />
+    <br />
+  <!--   <p>{{studentArrayValue1}}</p> -->
+    <strong>Selected Student:</strong><br />
+    <table style="border:1px solid;width:350px" ng-show="studentArrayValue1" >
+	<tr style="background-color:pink">
+		<th >Registration No:</th><th><h4>{{studentArrayValue1.rno}}</h4></th>
+	</tr>
+	<tr>
+		<td>First Name:</td><td>{{studentArrayValue1.fname}}</td>
+	</tr>
+	<tr>
+		<td>Last Name:</td><td>{{studentArrayValue1.lname}}</h5></td>
+	</tr>
+	<tr>
+		<td>DOB:</td><td><h5>{{studentArrayValue1.dob}}</h5></td>
+	</tr>
+	<tr>
+		<td>Degree:</td><td><h5>{{studentArrayValue1.degree}}</h5></td>
+	</tr>
+	<tr>	
+		<td>Branch:</td><td><h5>{{studentArrayValue1.branch}}</h5></td>
+	</tr>
+	<tr>
+		<td>Date of Join</td><td>{{studentArrayValue1.doj}}</td>
+	</tr>
+	</table>
+</div>

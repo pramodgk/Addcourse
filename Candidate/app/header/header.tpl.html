@@ -11,20 +11,36 @@
         </div>
         <div class='navbar-collapse collapse' data-bs-collapse-target>
             <ul class='nav navbar-nav'>
-                <li data-match-route='/home'>
-                    <a href='#/home'>Home</a>
-                </li>
-                <li>
-                    <a ui-sref="Course.admin">admin</a>
+               <!--  <li data-match-route='/home' class="glyphicon glyphicon-home">
+                    
+                </li> -->
+                <li ><a ui-sref="Course.welcome"><i class="glyphicon glyphicon-home"></i>
+                Home</a></li>
+                <li ng-show="login2" >
+                    <a ui-sref="Course.admin">Login</a>
                 </li>
                 <li>
                     <a ui-sref="Course.student">Student</a>
                 </li>
-               <li>
+                <li>
+                    <a ui-sref="Course.addCandidate"><i class="glyphicon glyphicon-user-add"></i>Add Student</a>
+                </li>
+               <li ng-show="login2">
                     <a href="">Faculty</a>
                 </li>
                
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li ng-show="login1" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
+                <ul class="dropdown-menu" ng-controller="loginCtrl">
+                    <li><a href="#">{{uname}}</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Change Password</a></li>
+                    <li><a ng-click="logout()" href="#">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
         </div>
     </div>
 </div>

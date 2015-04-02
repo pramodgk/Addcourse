@@ -37,5 +37,14 @@ angular
       }
     }
       })
+       .state('Course.WelcomePage',{
+        url:"/WelcomePage",
+        views:{
+          '@':{
+
+        templateUrl:"Create/Welcome.tpl.html"
+      }
+    }
+      })
   }
 })();
