@@ -61,8 +61,9 @@
         function activate() {}
 
            $scope.add1=function(){
-          this.rno=document.getElementById("rno").value,this.fname=$scope.fname,this.lname=$scope.lname,this.dob=$scope.dob,this.degree=$scope.peopleArrayValue1.cname,this.branch=$scope.branch,this.doj=$scope.doj;
-          $scope.regNo++;
+          this.regNo=$scope.regNo++,this.fname=$scope.fname,this.lname=$scope.lname,this.dob=$scope.dob,this.degree=$scope.peopleArrayValue1.cname,this.branch=$scope.branch,this.doj=$scope.doj;
+          /*$scope.regNo=$scope.regNo++;*/
+          
         }
         $scope.addStud=function(){
           $scope.students.push(new $scope.add1());

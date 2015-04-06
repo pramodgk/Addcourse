@@ -1,0 +1,25 @@
+
+	
+	<!-- <select id="peopleArraySel1" ng-model="peopleArrayValue1" ng-options="person.cname for person in newcourse" class="form-control" style="width:200px">
+      <option value="">[No Course]</option>
+    </select><br />
+    <br />
+    <strong>Selected Course:</strong><br /> -->
+    <table style="border:1px solid;width:350px" ng-controller="Logincontroller">
+	<tr style="background-color:pink" ng-repeat="i in Candidate">
+		<td>Degree Name:</td><td>{{i.degree}}</td>
+		<td>Branches:</td><td>{{i.branch}}</td>
+	</tr>
+	<!-- <tr>
+		<td>Branches:</td><td><h5 ng-repeat="gc in peopleArrayValue1.courses">{{gc}}</h5></td>
+	</tr>
+	<tr>
+		<td>Total intake:</td><td><h5>{{peopleArrayValue1.intake}}</h5></td>
+	</tr>
+	<tr>
+		<td>Course Started date:</td><td><h5>{{peopleArrayValue1.csdate}}</h5></td>
+	</tr>
+	<tr>	
+		<td>Eligibility:</td><td><h5>{{peopleArrayValue1.eligible}}</h5></td>
+	</tr> -->
+	</table>

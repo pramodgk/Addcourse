@@ -14,7 +14,7 @@
             'ui.router',
             'mgcrea.ngStrap',
             'home',
-            'Create','student','login','register','admin'
+            'Create','student','login','register','admin','login1'
         ]);
 
     angular

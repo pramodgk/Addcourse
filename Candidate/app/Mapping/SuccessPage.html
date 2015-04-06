@@ -1,0 +1,70 @@
+<style>
+h4 {
+    color: white;
+    text-align: ;
+}
+
+small {
+    color: white;
+}
+
+.gridStyle {
+    border: 1px solid rgb(212, 212, 212);
+    width: 400px;
+    height: 300px;
+}
+</style>
+<div class="container" ng-controller="Logincontroller">
+    <div class="row">
+        <label style="dispaly:inline" for="Course"></label>
+        <div class="row col-md-6">
+            <form class="form" name="form-degree">
+                <h2><strong>Add New Degree</strong></h2>
+                <div ng-class="{ 'has-error': form-degree.degreename.$dirty && form-degree.degreename.$error.required }" class="form-group">
+                    <br>
+                    <!--  <select ng-model="deg" ng-options="v.id as v.value for (k, v) in degrees | filter:  {b_id:br}" required> -->
+                    <select ng-model="deg" name="degreename" ng-options="v as v.value for (k, v) in degrees" ng-change='updateBranch(deg)' required>
+                    </select>
+                    </br>
+                    The value selected is {{deg}}
+                </div>
+                <!--  <div  ng-class="form-group" ng-repeat="i in degrees | filter:  {b_id:deg}">
+                    {{i.value}}
+                </div> -->
+                <div ng-class="{ 'has-error':form-degree.branchname.$dirty && form-degree.branchname.$error.required }" class="form-group">
+                    <h3><strong>Add New Branches</strong></h3>
+                    <!--  <select ng-model="br" ng-options="v.b_id as v.value for (k, v) in branches" required> -->
+                    <select ng-model="br" ng-options='l as l for l in updatelst' required>
+                    </select>
+                </div> The value selected is {{br}}
+                <!--  <div ng-repeat="i in branches | filter: {b_id:deg}">
+                    {{i.value}}
+                </div> -->
+                <div class="form-actions">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" ng-click="add()" novalidate>Add</button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" ui-sref="SuccessPage.show" novalidate>show</button>
+                    </div>
+                    <!--  <div ng-show="deg">
+                    {{deg.value}}
+                </div> -->
+                    <div ng-class="form-group">
+                        <table>
+                            <tr>
+                                <td>Added values are: </td>
+                            </tr>
+                            <tr ng-repeat="j in arr">
+                                <td>{{j.value}}</td>
+                            </tr>
+                        </table>
+                    </div>
+            </form>
+            </div>
+        </div>
+
+    <!--  <div ng-show=false> -->
+    <div class="col-md-6" data-ui-view>
+    </div>
+        </div>
+    <!-- 
+</div> -->
