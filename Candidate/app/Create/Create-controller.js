@@ -68,7 +68,7 @@
         $scope.addStud=function(){
           $scope.students.push(new $scope.add1());
           console.log($scope.students);
-          console.log(document.getElementById("rno"));
+          console.log(document.getElementById("rno").value);
           slist.setallstud($scope.students);
           console.log($scope.students.fname);
           alert("AddSuccess");

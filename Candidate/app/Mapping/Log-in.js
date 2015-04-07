@@ -35,7 +35,7 @@
                 templateUrl: "Mapping/SuccessPage.html"
             })
              .state('SuccessPage.show', {
-                url: "/ViewPage",
+                url: "/show",
                 templateUrl: "Mapping/show.html"
             })
             .state('SuccessPage.candidate', {

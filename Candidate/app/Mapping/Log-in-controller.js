@@ -3,6 +3,8 @@
     angular
         .module('login1')
         .controller('Logincontroller', ['$scope', '$state', function($scope, $state,list1) {
+           var vm = this;
+            vm.ctrlName = 'Logincontroller';
             $scope.candidate=[];
             var mobj = [];
              $scope.updatelst =[];
@@ -112,7 +114,7 @@
             };
             $scope.add1=function()
             {
-                this.degree=$scope.deg.value,this.branch=$scope.br;
+                return (this.degree=$scope.deg.value,this.branch=$scope.br)
             }
             $scope.move = function() {
                 $state.go("candidate");

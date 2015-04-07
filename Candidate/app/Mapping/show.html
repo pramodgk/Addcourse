@@ -1,15 +1,19 @@
 
 	
-	<!-- <select id="peopleArraySel1" ng-model="peopleArrayValue1" ng-options="person.cname for person in newcourse" class="form-control" style="width:200px">
+	<!-- <select id="peopleArraySel1" ng-model="peopleArrayValue1" ng-options="person.degree for person in candidate" class="form-control" style="width:200px">
       <option value="">[No Course]</option>
-    </select><br />
+    </select><br /> -->
     <br />
-    <strong>Selected Course:</strong><br /> -->
-    <table style="border:1px solid;width:350px" ng-controller="Logincontroller">
-	<tr style="background-color:pink" ng-repeat="i in Candidate">
+  
+    <table style="border:1px solid;width:350px"  ng-repeat="i in candidate">
+    
+	<tr style="background-color:pink" >
 		<td>Degree Name:</td><td>{{i.degree}}</td>
+	</tr>
+	<tr>
 		<td>Branches:</td><td>{{i.branch}}</td>
 	</tr>
+	
 	<!-- <tr>
 		<td>Branches:</td><td><h5 ng-repeat="gc in peopleArrayValue1.courses">{{gc}}</h5></td>
 	</tr>
