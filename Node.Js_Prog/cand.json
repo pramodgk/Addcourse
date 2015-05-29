@@ -1,0 +1,33 @@
+[
+	{
+		"name":"Ajay",
+		"age":25,
+		"degree":"MCA",
+		"percent":85
+	},
+	{
+		"name":"Kumar",
+		"age": 24,
+		"degree":"BCA",
+		"percent":70
+	},
+	{
+		"name":"Manohar",
+		"age": 26,
+		"degree":"M-tech",
+		"percent":65
+	},
+	{
+		"name":"Abhishek",
+		"age":24,
+		"degree":"MCA",
+		"percent":75
+	},
+	{
+		"name":"Pradeep",
+		"age":25,
+		"degree":"BCA.",
+		"percent":73
+	}
+]
+	
